@@ -1,7 +1,8 @@
 spring:
   application:
     name: core
-
-xml:
-  path: /Users/mac/workspace/dev
-  filename: CORPCODE.xml
+  profiles:
+    group:
+      local: ["application-local"]
+      dev: ["application-dev"]
+    default: local
