@@ -41,4 +41,20 @@ public class DartCompanyMetadata {
             .modifiedAt(modifiedAt)
             .build();
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Data = ");
+        sb.append("Code : ");
+        sb.append(corporationCode);
+        sb.append(", Name : ");
+        sb.append(corporationName);
+        sb.append(", StockCode : ");
+        sb.append(stockCode == null ? "NOT REGISTERED" : stockCode);
+        sb.append(", ModifiedAt : ");
+        sb.append(modifiedAt.toString());
+
+        return sb.toString();
+    }
 }
