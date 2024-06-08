@@ -27,11 +27,11 @@ public class Post {
     @Column(name = "post_id")
     private Long id;
 
-    @Comment("")
+    @Comment("게시글 제목")
     @Column(name = "title", nullable = false)
     private String title;
 
-    @Comment("")
+    @Comment("게시글 내용")
     @Column(name = "content", nullable = false)
     private String content;
 
