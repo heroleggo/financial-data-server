@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Comment;
 
 @Entity
 @Table(name = "users")
@@ -21,15 +22,19 @@ public class User {
     @Column(name = "user_id")
     private Long id;
 
+    @Comment("사용자 성명")
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Comment("사용자 이메일")
     @Column(name = "email", nullable = false)
     private String email;
 
+    @Comment("사용자 암호화 비밀번호")
     @Column(name = "password", nullable = false)
     private String password;
 
+    @Comment("생성일자")
     @Column(name = "created_at", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date createdAt;
 

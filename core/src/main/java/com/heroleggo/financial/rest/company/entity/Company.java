@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Comment;
 
 @Entity
 @Table(name = "companies")
@@ -20,12 +21,15 @@ public class Company {
     @Column(name = "company_id")
     private Long id;
 
+    @Comment("기업명")
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Comment("기업 상장여부")
     @Column(name = "is_public", nullable = false)
     private boolean isPublic;
 
+    @Comment("기업 산업군")
     @Column(name = "industry")
     private String industry;
 }

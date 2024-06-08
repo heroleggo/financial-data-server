@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Comment;
 
 @Entity
 @Table(name = "financial_statement_items")
@@ -22,9 +23,11 @@ public class FinancialStatementItem {
     @Column(name = "item_id")
     private Long id;
 
+    @Comment("재무제표 상세 항목명")
     @Column(name = "item_name")
     private String name;
 
+    @Comment("재무제표 상세 항목값")
     @Column(name = "item_value")
     private Long value;
 

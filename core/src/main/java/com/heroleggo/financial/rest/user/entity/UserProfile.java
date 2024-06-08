@@ -11,6 +11,7 @@ import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Comment;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -24,21 +25,27 @@ public class UserProfile {
     @Column(name = "user_profile_id", columnDefinition = "AUTO_INCREMENT")
     private Long id;
 
+    @Comment("프로필사진 경로")
     @Column(name = "profile_picture_path")
     private String profilePicturePath;
 
+    @Comment("전화번호")
     @Column(name = "phone")
     private String phone;
 
+    @Comment("주소지")
     @Column(name = "address")
     private String address;
 
+    @Comment("직업군")
     @Column(name = "occupation")
     private String occupation;
 
+    @Comment("자기소개")
     @Column(name = "bio", columnDefinition = "TEXT")
     private String bio;
 
+    @Comment("생년월일")
     @Column(name = "birth", columnDefinition = "DATE")
     private Date birth;
 
