@@ -29,6 +29,9 @@ public class FinancialStatement {
     @Column(name = "statement_type")
     private StatementType type;
 
+    @Column(name = "created_at", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private Date createdAt;
+
     @ManyToOne
     @JoinColumn(name = "company_id")
     private Company company;
