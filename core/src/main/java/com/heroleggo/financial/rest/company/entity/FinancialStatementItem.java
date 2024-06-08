@@ -3,6 +3,8 @@ package com.heroleggo.financial.rest.company.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,22 +12,23 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "companies")
+@Table(name = "financial_statement_items")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Builder
-public class Company {
+public class FinancialStatementItem {
     @Id
-    @Column(name = "company_id")
+    @Column(name = "item_id")
     private Long id;
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "item_name")
     private String name;
 
-    @Column(name = "is_public", nullable = false)
-    private boolean isPublic;
+    @Column(name = "item_value")
+    private Long value;
 
-    @Column(name = "industry")
-    private String industry;
+    @ManyToOne
+    @JoinColumn(name = "statement_id")
+    private FinancialStatement statement;
 }
