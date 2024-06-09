@@ -11,6 +11,9 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  devtools:
+    livereload:
+      enabled: true
 
 xml:
   path: /Users/mac/workspace/dev
