@@ -22,7 +22,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Data
 public class UserProfile {
     @Id
-    @Column(name = "user_profile_id", columnDefinition = "AUTO_INCREMENT")
+    @Column(name = "user_profile_id")
     private Long id;
 
     @Comment("프로필사진 경로")
