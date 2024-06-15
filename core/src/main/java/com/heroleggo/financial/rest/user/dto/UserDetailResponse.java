@@ -10,7 +10,6 @@ import lombok.RequiredArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Data()
 public class UserDetailResponse extends UserCoreResponse {
     private String profilePicturePath;

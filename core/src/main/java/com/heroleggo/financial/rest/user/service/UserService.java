@@ -1,5 +1,7 @@
 package com.heroleggo.financial.rest.user.service;
 
-public interface UserService {
+import com.heroleggo.financial.rest.user.entity.User;
 
+public interface UserService {
+    public User findUserById(Long userId);
 }
