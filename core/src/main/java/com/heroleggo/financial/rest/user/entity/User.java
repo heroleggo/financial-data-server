@@ -40,10 +40,11 @@ public class User {
     @Column(name = "created_at", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date createdAt;
 
-    public static User of(String name, String email) {
+    public static User of(String name, String email, String password) {
         return User.builder()
             .name(name)
             .email(email)
+            .password(password)
             .build();
     }
 }
