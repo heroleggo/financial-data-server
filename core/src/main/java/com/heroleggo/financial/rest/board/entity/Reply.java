@@ -3,6 +3,7 @@ package com.heroleggo.financial.rest.board.entity;
 import com.heroleggo.financial.rest.user.entity.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -22,6 +23,7 @@ import org.hibernate.annotations.Comment;
 @Builder
 public class Reply {
     @Id
+    @GeneratedValue
     @Column(name = "reply_id")
     private Long id;
 
