@@ -14,3 +14,6 @@ spring:
 xml:
   path: /Users/mac/workspace/dev
   filename: CORPCODE.xml
+
+jwt:
+  secretKey: testkey
