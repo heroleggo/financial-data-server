@@ -1,5 +1,8 @@
 package com.heroleggo.financial.rest.board.repository;
 
-public interface BoardRepository {
+import com.heroleggo.financial.rest.board.entity.Board;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BoardRepository extends JpaRepository<Board, Long> {
 
 }
