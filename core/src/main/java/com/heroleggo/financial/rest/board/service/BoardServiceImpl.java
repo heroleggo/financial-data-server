@@ -15,23 +15,23 @@ public class BoardServiceImpl implements BoardService {
 
 
     @Override
-    public void createBoard(CreateBoardRequest request) {
+    public Board createBoard(CreateBoardRequest request) {
         Board board = request.toEntity();
-        boardRepository.save(board);
+        return boardRepository.save(board);
     }
 
     @Override
     public List<Board> listBoard() {
-        return null;
+        return boardRepository.findAll();
     }
 
     @Override
     public Board findBoardById(Long id) {
-        return null;
+        return boardRepository.findById(id).orElse(null);
     }
 
     @Override
     public Board findBoardByName(String name) {
-        return null;
+        return boardRepository.findByName(name).orElse(null);
     }
 }
