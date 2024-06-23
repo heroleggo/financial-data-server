@@ -1,7 +1,6 @@
 package com.heroleggo.financial.rest.company.dto;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
