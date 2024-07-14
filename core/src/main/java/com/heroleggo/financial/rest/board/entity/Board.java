@@ -32,4 +32,10 @@ public class Board {
     @Comment("생성일자")
     @Column(name = "created_at", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date createdAt;
+
+    public static Board of(Long id) {
+        return Board.builder()
+            .id(id)
+            .build();
+    }
 }
